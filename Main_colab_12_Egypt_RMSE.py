@@ -24,6 +24,7 @@ from sklearn.preprocessing import MinMaxScaler
 from numpy import array
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error as MAE
+from sklearn.metrics import mean_squared_error
 import random
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
@@ -249,7 +250,7 @@ print(confusion_matrix(ytest2,pred2))
 rand = randint(0, 30000)
 rand
 
-# Report RMSEfor more insight
+# Report RMSE for more insight
 rmse = np.sqrt(mean_squared_error(flatten(y_test), flatten(pred)))
 print("RMSE:", rmse)
 
