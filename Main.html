@@ -14980,8 +14980,8 @@ Epoch 5/5
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pred</span><span class="p">)):</span>
     <span class="k">if</span> <span class="n">pred</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
         <span class="n">pred</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">pred2</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">pred</span><span class="p">),</span> <span class="n">bins</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">names</span><span class="p">)</span>
-<span class="n">ytest2</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">y_test</span><span class="p">)),</span> <span class="n">bins</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">names</span><span class="p">)</span>
+pred2=pd.cut(flatten(pred), bins, labels = names).astype(str)
+ytest2=pd.cut(flatten(y_test), bins, labels = names).astype(str)
 </pre></div>
 
      </div>
